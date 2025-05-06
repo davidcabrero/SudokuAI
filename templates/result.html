@@ -1,10 +1,53 @@
 <!doctype html>
-<html>
-  <body>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resultado del Sudoku</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .container {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      max-width: 600px;
+      width: 90%;
+    }
+    h2 {
+      text-align: center;
+      color: #4CAF50;
+    }
+    p {
+      font-size: 1.1em;
+      margin-bottom: 10px;
+    }
+    pre {
+      background: #f0f0f0;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+      font-family: 'Courier New', Courier, monospace;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
     <h2>Resultado</h2>
-    <p>Tablero original:</p>
+    <p><strong>Tablero original:</strong></p>
     <pre>{{ original }}</pre>
-    <p>Tablero resuelto:</p>
+    <p><strong>Tablero resuelto:</strong></p>
     <pre>{{ resuelto }}</pre>
-  </body>
+  </div>
+</body>
 </html>
