@@ -1,0 +1,6 @@
+cv2
+flask
+numpy
+tensorflow
+keras
+scikit-learn
