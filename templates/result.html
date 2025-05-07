@@ -28,16 +28,20 @@
       text-align: center;
       color: #4CAF50;
     }
-    p {
-      font-size: 1.1em;
-      margin-bottom: 10px;
+    .sudoku-table {
+      border-collapse: collapse;
+      margin: 10px auto;
     }
-    pre {
-      background: #f0f0f0;
-      padding: 10px;
-      border-radius: 5px;
-      overflow-x: auto;
-      font-family: 'Courier New', Courier, monospace;
+    .sudoku-table td {
+      width: 40px;
+      height: 40px;
+      text-align: center;
+      vertical-align: middle;
+      border: 1px solid #333;
+      font-size: 1.2em;
+    }
+    .sudoku-table .subgrid-border {
+      border-width: 2px;
     }
   </style>
 </head>
@@ -45,9 +49,29 @@
   <div class="container">
     <h2>Resultado</h2>
     <p><strong>Tablero original:</strong></p>
-    <pre>{{ original }}</pre>
+    <table class="sudoku-table">
+      {% for row in original %}
+      <tr>
+        {% for cell in row %}
+        <td class="{% if loop.index0 % 3 == 0 %}subgrid-border{% endif %}">
+          {{ cell if cell != 0 else '' }}
+        </td>
+        {% endfor %}
+      </tr>
+      {% endfor %}
+    </table>
     <p><strong>Tablero resuelto:</strong></p>
-    <pre>{{ resuelto }}</pre>
+    <table class="sudoku-table">
+      {% for row in resuelto %}
+      <tr>
+        {% for cell in row %}
+        <td class="{% if loop.index0 % 3 == 0 %}subgrid-border{% endif %}">
+          {{ cell }}
+        </td>
+        {% endfor %}
+      </tr>
+      {% endfor %}
+    </table>
   </div>
 </body>
 </html>
