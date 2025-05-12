@@ -30,10 +30,11 @@ SudokuAI es un proyecto diseñado para resolver sudokus automáticamente utiliza
 
 ## Estructura del Proyecto
 
-- `app.py`: Programa principal y procesamiento de imágenes.
+- `app.py`: Programa principal.
+- `procesarImagen.py`: Preprocesamiento de Imágenes.
 - `sudoku.py`: Algoritmo de resolución del sudoku.
 - `assets/`: Conjunto de datos para entrenar el modelo.
 - `templates/`: Páginas de inicio y resultados.
-- `modelo.h5`: Modelo entrenado con Redes Neuronales CNN para el reconocimiento de números.
-- `modelo.ipynb`: Entrenamiento del modelo.
+- `modelo_sudoku.h5`: Modelo entrenado con Redes Neuronales CNN para el reconocimiento de números.
+- `entrenar_modelo.ipynb`: Entrenamiento del modelo.
 - `tests/`: Imágenes para realizar pruebas.
